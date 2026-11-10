@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 25% 98%;
+    --foreground: 133 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 133 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 133 15% 15%;
+
+    --primary: 125 55% 24%; /* #1B5E20 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 122 39% 49%; /* #4CAF50 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 17% 93%;
+    --muted-foreground: 125 7% 47%;
+
+    --accent: 123 43% 94%; /* #E8F5E9 */
+    --accent-foreground: 125 55% 24%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 15% 90%;
+    --input: 120 15% 90%;
+    --ring: 125 55% 24%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-brand-bg text-brand-dark font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar for sleek e-commerce feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F8F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8E6C9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #81C784;
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
